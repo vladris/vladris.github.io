@@ -1,0 +1,191 @@
+body {
+    margin: auto;
+    max-width: 800px;
+    background-color: #330033;
+    font-family: Calibri, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+
+    background-image: -webkit-radial-gradient(50% 50%, circle, rgb(100, 100, 100), rgb(51, 0, 51));
+    background-image: -moz-radial-gradient(50% 50%, circle, rgb(100, 100, 100), rgb(51, 0, 51));
+    background-image: -ms-radial-gradient(50% 50%, circle, rgb(100, 100, 100), rgb(51, 0, 51));
+    background-image: -o-radial-gradient(50% 50%, circle, rgb(100, 100, 100), rgb(51, 0, 51));
+    background-image: radial-gradient(circle at 50% 50%, rgb(100, 100, 100), rgb(51, 0, 51));
+}
+
+#bg {
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background-image: url(http://vladris.blob.core.windows.net/static/noise.png);
+    background-repeat: repeat;
+}
+
+header {
+    margin: 0;
+    margin-left: 190px;
+    padding: 20px 60px;
+}
+
+header a:link, header a:visited, header a:hover, header a:active {
+    text-decoration:none;
+}
+
+#logo-container {
+    float: left;
+    margin-left: -50px;
+    margin-top: 13px;
+    height: 60px;
+}
+
+.logo-bar {
+    background: white;
+    width: 30px;
+    height: 4px;
+    -moz-box-shadow: 0 2px 3px black;
+    -webkit-box-shadow: 0 2px 3px black;
+    box-shadow: 0 2px 3px black; 
+}
+
+.logo-bar + .logo-bar {
+    margin-top: 4px;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 3em;
+    text-shadow: 0px 2px 3px black;
+    line-height: 60px;
+    height: 60px;
+    color: white;
+}
+
+header span {
+    color: #888;
+    font-size: .5em;
+    font-style: oblique; 
+}
+
+ul {
+    padding-left: 20px;
+}
+
+nav {
+    background: #210021;
+    margin: 40px -40px;
+    padding: 10px 0;
+    height: 201px;
+    width: 250px;
+    float: left;
+}
+
+nav ul {
+    padding: 20px 0;
+    margin: 0 auto;
+    width: 40%;
+}
+
+nav li {
+    list-style: none;
+    padding: 10px 0;
+}
+
+nav a, nav a:hover, nav a:visited, nav a:active {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#article-container {
+    -moz-box-shadow: 0 0 10px 5px #210021;
+    -webkit-box-shadow: 0 0 10px 5px #210021;
+    box-shadow: 0 0 10px 5px #210021; 
+    margin-left: 185px;
+}
+
+article {
+    background: #FDFCF8;
+    color: #131819;
+    padding: 20px 60px;
+    min-width: 300px;
+}
+
+article li {
+    list-style-type: square;
+}
+
+pre {
+    overflow: scroll;
+    border: 1px solid black;
+    background: #DDDDDD;
+    padding: 5px;
+    font-size: .8em;
+}
+
+section h1 {
+    font-size: 1.5em;
+}
+
+section + section {
+    border-top: 2px solid #e8ebe9;
+}
+
+footer {
+    float: right;
+    margin: -20px -20px 0 -20px;
+    padding: 10px 60px;
+    background: #210021;
+    color: #DDD;
+    font-size: .9em;
+}
+
+footer a:link, footer a:visited, footer a:hover, footer a:active {
+    color: #DDD;
+}
+
+#showcase {
+    width: 100%; 
+    border: 10px solid black;
+    border-radius: 5px;
+    margin-left: -10px;
+}
+
+.button {
+    background: #008b00;
+    height: 80px;
+    width: 270px;
+    line-height: 20px;
+    -moz-box-shadow: 2px 2px 2px black;
+    -webkit-box-shadow: 2px 2px 2px black;
+    box-shadow: 2px 2px 2px black; 
+}
+
+.button img {
+    float: left;
+    height: 50px;
+    width: 50px;
+    margin: 15px 20px;
+    border: none;
+}
+
+.button-link {
+    text-decoration: none;
+    color: #fdfcf8;
+}
+
+.button .title {
+    margin: 0;
+    padding: 20px 0 0 90px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.button .description {
+    margin: 0;
+    padding: 0;
+    padding-left: 90px;
+}

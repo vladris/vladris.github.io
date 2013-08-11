@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>WriteRT</title>
+    <link rel="stylesheet" type="text/css" href="/static/writert/style.css" /> 
+    <link rel="shortcut icon" href="/static/writert/WriteRT.ico" />
+
+    <script type="text/javascript">
+        var interval = 3000;
+        imageArray = new Array("1.png", "2.png", "3.png", "4.png");
+        imageNum = 0;
+
+        function switchImage() {
+            imageNum = (imageNum + 1) % imageArray.length;
+            document.getElementById("showcase").src = "/static/writert/" + imageArray[imageNum];
+            timerID = setTimeout("switchImage()", interval); 
+        }
+    </script>
+</head>
+
+<body onload="switchImage()">
+    <div id="bg"></div>
+
+    <header>
+        <a href="/writert/"> 
+            <div id="logo-container">
+                <div class="logo-bar"></div>
+                <div class="logo-bar"></div>
+                <div class="logo-bar"></div>
+                <div class="logo-bar"></div>
+                <div class="logo-bar"></div>
+            </div>
+            <h1>WriteRT <span>The art of writing</span></h1>
+        </a>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/writert/">Home</a></li>
+            <li><a href="/writert/support/">Support</a></li>
+            <li><a href="/writert/feedback/">Feedback</a></li>
+        </ul>
+    </nav>
+
+    <div id="article-container">
+        <article>
+            <h1>Simple. Inspiring. Beautiful.</h1>
+
+            <img id="showcase" src="{{ STATIC_URL }}1.png" alt="slideshow" />
+
+            <p>WriteRT is a focused writing application with Markdown for formatting. As soon as you start typing, WriteRT gets out of your way - the UI fades out and you can focus on writing, with no distractions.</p>
+
+            <ul>
+                <li>No Save button because all changes are auto-saved as you write.</li>
+                <li>No complex menus for formatting text - formatting is done with Markdown syntax.</li>
+                <li>Share data with other apps through the Sharing charm.</li>
+                <li>Set a word goal and get a notification when you reach it.</li>
+            </ul>
+
+            <a href="http://apps.microsoft.com/windows/app/writert/efc7bfe6-668e-4c4d-a42b-fc8f5ef7205d" class="button-link">
+                <div class="button" style="margin: 40px auto">
+                    <img src="http://vladris.blob.core.windows.net/static/store.png" alt="" />
+                    <p class="title">Try It Out</p>
+                    <p class="description">in the Windows Store</p>
+                </div>
+            </a>
+        </article>
+    </div>
+    <footer>&copy; Copyright 2012-2013, Vlad Riscutia | <a href="/writert/license">License</a></footer>
+
+    <script>
+        var _gaq=[['_setAccount','UA-28327720-1'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+</body>
+</html>
