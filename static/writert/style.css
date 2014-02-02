@@ -4,12 +4,6 @@ body {
     background-color: #330033;
     font-family: Calibri, Helvetica, Arial, sans-serif;
     font-size: 18px;
-
-    background-image: -webkit-radial-gradient(50% 50%, circle, rgb(100, 100, 100), rgb(51, 0, 51));
-    background-image: -moz-radial-gradient(50% 50%, circle, rgb(100, 100, 100), rgb(51, 0, 51));
-    background-image: -ms-radial-gradient(50% 50%, circle, rgb(100, 100, 100), rgb(51, 0, 51));
-    background-image: -o-radial-gradient(50% 50%, circle, rgb(100, 100, 100), rgb(51, 0, 51));
-    background-image: radial-gradient(circle at 50% 50%, rgb(100, 100, 100), rgb(51, 0, 51));
 }
 
 #bg {
