@@ -1,0 +1,76 @@
+body
+{
+    padding-top: 40px;
+}
+
+#showcase {
+    max-width: 640px;
+}
+
+.narrow
+{
+    margin: auto;
+    max-width: 640px;
+}
+
+pre
+{
+    word-break: normal;
+    word-wrap: normal;
+}
+
+#logo-container {
+    float: left;
+    margin-left: -50px;
+    margin-top: 13px;
+    height: 60px;
+}
+
+.logo-bar {
+    background: white;
+    width: 30px;
+    height: 4px;
+    -moz-box-shadow: 0 2px 3px black;
+    -webkit-box-shadow: 0 2px 3px black;
+    box-shadow: 0 2px 3px black; 
+}
+
+.logo-bar + .logo-bar {
+    margin-top: 4px;
+}
+
+.button {
+    background: #008b00;
+    height: 80px;
+    width: 270px;
+    line-height: 20px;
+    -moz-box-shadow: 2px 2px 2px black;
+    -webkit-box-shadow: 2px 2px 2px black;
+    box-shadow: 2px 2px 2px black; 
+}
+
+.button img {
+    float: left;
+    height: 50px;
+    width: 50px;
+    margin: 15px 20px;
+    border: none;
+}
+
+.button-link {
+    text-decoration: none !important;
+    color: #fdfcf8 !important;
+}
+
+.button .title {
+    margin: 0;
+    padding: 20px 0 0 90px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.button .description {
+    margin: 0;
+    padding: 0;
+    padding-left: 90px;
+}

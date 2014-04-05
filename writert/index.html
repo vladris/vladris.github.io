@@ -1,12 +1,22 @@
 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="WriteRT is a focused writing application with Markdown for formatting. As soon as you start typing, WriteRT gets out of your way - the UI fades out and you can focus on writing, with no distractions.">
+    <meta name="author" content="Vlad Riscutia">
+    <link rel="shortcut icon" href="static/WriteRT.ico" />
 
-<html>
-<head>
-    <meta charset='utf-8'>
     <title>WriteRT</title>
-    <link rel="stylesheet" type="text/css" href="/static/writert/style.css" /> 
-    <link rel="shortcut icon" href="/static/writert/WriteRT.ico" />
 
+    <!-- Bootstrap core CSS -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="static/css/style.css" rel="stylesheet">
+
+    <!-- Slideshow script -->
     <script type="text/javascript">
         var interval = 3000;
         imageArray = new Array("1.png", "2.png", "3.png", "4.png");
@@ -14,61 +24,78 @@
 
         function switchImage() {
             imageNum = (imageNum + 1) % imageArray.length;
-            document.getElementById("showcase").src = "/static/writert/" + imageArray[imageNum];
+            document.getElementById("showcase").src = "static/" + imageArray[imageNum];
             timerID = setTimeout("switchImage()", interval); 
         }
     </script>
-</head>
+  </head>
 
-<body onload="switchImage()">
-    <div id="bg"></div>
+  <body onload="switchImage()">
 
-    <header>
-        <a href="/writert/"> 
-            <div id="logo-container">
-                <div class="logo-bar"></div>
-                <div class="logo-bar"></div>
-                <div class="logo-bar"></div>
-                <div class="logo-bar"></div>
-                <div class="logo-bar"></div>
-            </div>
-            <h1>WriteRT <span>The art of writing</span></h1>
-        </a>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="/writert/">Home</a></li>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">WriteRT</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/writert/">Home</a></li>
             <li><a href="/writert/support/">Support</a></li>
-            <li><a href="/writert/feedback/">Feedback</a></li>
-        </ul>
-    </nav>
-
-    <div id="article-container">
-        <article>
-            <h1>Simple. Inspiring. Beautiful.</h1>
-
-            <img id="showcase" src="{{ STATIC_URL }}1.png" alt="slideshow" />
-
-            <p>WriteRT is a focused writing application with Markdown for formatting. As soon as you start typing, WriteRT gets out of your way - the UI fades out and you can focus on writing, with no distractions.</p>
-
-            <ul>
-                <li>No Save button because all changes are auto-saved as you write.</li>
-                <li>No complex menus for formatting text - formatting is done with Markdown syntax.</li>
-                <li>Share data with other apps through the Sharing charm.</li>
-                <li>Set a word goal and get a notification when you reach it.</li>
-            </ul>
-
-            <a href="http://apps.microsoft.com/windows/app/writert/efc7bfe6-668e-4c4d-a42b-fc8f5ef7205d" class="button-link">
-                <div class="button" style="margin: 40px auto">
-                    <img src="/static/writert/store.png" alt="" />
-                    <p class="title">Try It Out</p>
-                    <p class="description">in the Windows Store</p>
-                </div>
-            </a>
-        </article>
+            <li><a href="/writert/feedback">Feedback</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
     </div>
-    <footer>&copy; Copyright 2012-2013, Vlad Riscutia | <a href="/writert/license">License</a></footer>
+
+    <div class="container jumbotron hidden-xs visible-sm visible-md visible-lg">
+      <div class="content text-center">
+        <h1>Simple. Inspiring. Beautiful.</h1>
+
+        <img id="showcase" src="static/1.png" alt="slideshow" />
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="narrow content">
+        <h1 style="padding-top: 40px" class="visible-xs hidden-sm hidden-md hidden-lg">Simple. Inspiring. Beautiful.</h1>
+
+        <p>WriteRT is a focused writing application with Markdown for formatting. As soon as you start typing, WriteRT gets out of your way - the UI fades out and you can focus on writing, with no distractions.</p>
+
+        <ul>
+            <li>No Save button because all changes are auto-saved as you write.</li>
+            <li>No complex menus for formatting text - formatting is done with Markdown syntax.</li>
+            <li>Share data with other apps through the Sharing charm.</li>
+            <li>Set a word goal and get a notification when you reach it.</li>
+        </ul>
+
+        <a href="http://apps.microsoft.com/windows/app/writert/efc7bfe6-668e-4c4d-a42b-fc8f5ef7205d" class="button-link">
+            <div class="button" style="margin: 40px auto">
+                <img src="static/store.png" alt="" />
+                <p class="title">Try It Out</p>
+                <p class="description">in the Windows Store</p>
+            </div>
+        </a>
+      </div>
+
+    </div><!-- /.container -->
+
+    <div id="footer">
+        <div class="container text-center text-muted">
+            <p>&copy; Copyright 2012-2014, Vlad Riscutia | <a href="writert/license">License</a></p>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
 
     <script>
         var _gaq=[['_setAccount','UA-28327720-1'],['_trackPageview']];
@@ -76,5 +103,6 @@
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
         s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
-</body>
+  </body>
 </html>
+
