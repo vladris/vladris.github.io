@@ -1,79 +1,66 @@
 <!DOCTYPE html>
-
 <html>
-<head>
-    <meta charset='utf-8'>
-    <meta name="description" content="Personal website redesigner">
-    <title>Vlad Riscutia</title>
-    <style type="text/css">
-        * {
-            margin: 0;
-            padding: 0;
-        }
+    <head>
+        <meta charset='utf-8'>
+        <title>Vlad Riscutia</title>
+        <link rel="stylesheet" type="text/css" href="static/font-awesome/font-awesome.min.css">
+        <style type="text/css">
+            * {
+                margin: 0;
+                padding: 0;
+            }
 
-        body {
-            background-color: #fff;
-            font-family: "Segoe UI", Verdana, Futura, Helvetica, sans-serif;
-            font-size: 1.2em;
-            color: #423b34;
-            margin: auto;
-            padding: 40px;
-        }
+            body {
+                background-color: #fff;
+                min-width: 500px;
+                color: #423b34;
+                margin: auto;
+                text-align: center;
+            }
 
-        a {
-            color: #423b34;
-        }
+            #content {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                width: 500px;
+                margin-left: -250px;
+                height: 5em;
+                margin-top: -2.5em;
+            }
 
-        a:hover {
-            color: #e67e22;
-        }
+            .grid-column {
+                display:inline;
+                float: left;
+                position: relative;
+                width: 100px;
+            }
 
-        section {
-            margin-bottom: 20px;
-        }
-    </style>
-</head>
+            a {
+                color: #423b34;
+                text-decoration: none;
+            }
 
-<body>
-    <article>
-        <section>
-            <span>I'm currently redesigning my personal website. Thanks for your patience! Here's a bunny:</span>
-        </section>
-        <section>
-            <pre>
- (\_/)
-o(^.^)o
-(")_(")</pre>
-        </section>
-        <section>
-            <span>...or you could check out some of my personal projects:</span>
-        </section>
-        <section>
-            <ul>
-                <li><a href="http://www.tinkerer.me/">Tinkerer</a> (a Python/Sphinx-based static blog generator)</li>
-                <li><a href="http://vladris.com/writert/">WriteRT</a> (a Windows RT focused writing app)</li>
-                <li><a href="http://github.com/vladris/">More misc stuff on GitHub</a></li>
-            </ul>
-        </section>
-        <section>
-            <span>If you want to get in touch, here's my <a href="http://www.linkedin.com/in/riscutiavlad/">resume</a> (TL;DR I work at Microsoft) and
-            <script type="text/javascript">document.write(' <n uers="znvygb:iynqevf@bhgybbx.pbz">pbagnpg</n>'.replace(/[a-zA-Z]/g,
-                function(c){
-                    return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26); 
-                }));
-            </script> info.</span>
-        </section>
-    </article>
-</body>
+            a:hover {
+                color: #e67e22;
+            }
 
-<!--
-
-Look! Another bunny in the comments! This one's for you, brave reader of source code!
-
- (\_/)
-o(^.^)o
-(")_(")
-
- -->
-
+            span.button {
+                font-family: "FontAwesome";
+                font-size: 5em;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="content">
+            <div class="grid-column" style="margin-right: 50px">
+                <a href="https://twitter.com/vladris"><span class="fa-twitter-square button"></span></a>
+            </div>
+            <div class="grid-column" style="margin: 0px 50px">
+                <a href="https://linkedin.com/in/riscutiavlad"><span class="fa-linkedin-square button"></span></a>
+            </div>
+            <div class="grid-column" style="margin-left: 50px">
+                <a href="https://github.com/vladris"><span class="fa-github-square button"></span></a>
+            </div>
+        </div>
+    </body>
 </html>
