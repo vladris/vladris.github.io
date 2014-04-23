@@ -19,24 +19,9 @@ pre
     word-wrap: normal;
 }
 
-#logo-container {
-    float: left;
-    margin-left: -50px;
-    margin-top: 13px;
-    height: 60px;
-}
-
-.logo-bar {
-    background: white;
-    width: 30px;
-    height: 4px;
-    -moz-box-shadow: 0 2px 3px black;
-    -webkit-box-shadow: 0 2px 3px black;
-    box-shadow: 0 2px 3px black; 
-}
-
-.logo-bar + .logo-bar {
-    margin-top: 4px;
+img {
+    border: 30px solid black;
+    border-radius: 15px;
 }
 
 .button {
