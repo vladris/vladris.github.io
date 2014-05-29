@@ -79,10 +79,10 @@ span.button {
     }
 
     .content {
-        border-left: 40px solid red;
+        border-left: 30px solid red;
         margin-left: -60px;
         margin-top: 40px;
-        padding-left: 20px;
+        padding-left: 30px;
     }
 
     span.button {
