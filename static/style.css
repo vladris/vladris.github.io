@@ -76,9 +76,16 @@ span.button {
 
     .section {
         margin: 80px 0 120px 0;
-     }
+    }
 
-     span.button {
+    .content {
+        border-left: 40px solid red;
+        margin-left: -60px;
+        margin-top: 40px;
+        padding-left: 20px;
+    }
+
+    span.button {
          font-size: 8em;
-     }
+    }
 }
