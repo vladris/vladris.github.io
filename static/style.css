@@ -5,13 +5,25 @@
     padding: 0;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     background-color: #f8fafb;
     color: #282a2b;
+    display: table;
+    height: 100%;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 1.2em;
-    margin: 20px auto;
+    margin: auto;
     width: 500px;
+}
+
+#container {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
 }
 
 .comment {
@@ -21,7 +33,7 @@ body {
 }
 
 .section {
-    margin: 40px 0 60px 0;
+    margin: 20px 0 60px 0;
 }
 
 .content {
@@ -75,7 +87,7 @@ span.button {
     }
 
     .section {
-        margin: 80px 0 120px 0;
+        margin: 40px 0 120px 0;
     }
 
     .content {
