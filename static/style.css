@@ -10,8 +10,23 @@ body {
     color: #282a2b;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 1.2em;
-    margin: 20px auto;
-    width: 500px;
+    margin: 20px 40px;
+    min-width: 500px;
+}
+
+@media only screen and (min-width: 900px) {
+    body { 
+        margin: 20px auto;
+        width: 500px; 
+    }
+}
+
+/* High DPI */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+	only screen and (-o-min-device-pixel-ratio: 13/10),
+	only screen and (min-resolution: 120dpi)
+{
+    body { font-size: 1.5em; }
 }
 
 .comment {
