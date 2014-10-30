@@ -107,7 +107,7 @@ span.button {
 	only screen and (min-resolution: 192dpi)
 {
     body { 
-        font-size: 1.4em; 
+        font-size: 1.6em; 
         min-width: 800px; 
     }
 
@@ -123,6 +123,6 @@ span.button {
     }
 
     span.button {
-         font-size: 8em;
+         font-size: 6em;
     }
 }
