@@ -120,8 +120,13 @@ only screen and (min-resolution: 192dpi)
 
     .content {
         border-left: 30px solid red;
+        line-height: initial;
         margin-left: -60px;
         margin-top: 40px;
         padding-left: 30px;
+    }
+
+    span.button {
+        font-size: 8em;
     }
 }
