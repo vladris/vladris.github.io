@@ -107,8 +107,7 @@ only screen and (-o-min-device-pixel-ratio: 2/1),
 only screen and (min-resolution: 192dpi)
 {
     body { 
-        ‑webkit‑text‑size‑adjust: 100%
-        font-size: 1.2em; 
+        font-size: 2em;
     }
 
     .containerwrap {
