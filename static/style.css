@@ -107,7 +107,7 @@ span.button {
 	only screen and (min-resolution: 192dpi)
 {
     body { 
-        font-size: 1.4em; 
+        font-size: 1.2em; 
     }
 
     .containerwrap {
