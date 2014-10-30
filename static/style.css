@@ -14,7 +14,7 @@ body {
     color: #282a2b;
     height: 200%;
     font-family: Ubuntu, Helvetica, Arial, sans-serif;
-    font-size: 14.5pt;
+    font-size: 1.2em;
     width: 100%;
 }
 
@@ -92,12 +92,12 @@ a:hover {
 
 span.button {
     font-family: "FontAwesome";
-    font-size: 58pt;
+    font-size: 4em;
 }
 
 #bunny {
     color: white;
-    font-size: 72pt;
+    font-size: 6em;
     text-align: center;
 }
 
@@ -106,6 +106,10 @@ span.button {
 only screen and (-o-min-device-pixel-ratio: 2/1),
 only screen and (min-resolution: 192dpi)
 {
+    body { 
+        -webkit-text-size-adjust: 200%;
+    }
+
     .containerwrap {
         min-width: 800px; 
     }
