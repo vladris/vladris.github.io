@@ -106,10 +106,6 @@ span.button {
 only screen and (-o-min-device-pixel-ratio: 2/1),
 only screen and (min-resolution: 192dpi)
 {
-    body { 
-        -webkit-text-size-adjust: 200%;
-    }
-
     .containerwrap {
         min-width: 800px; 
     }
@@ -120,14 +116,12 @@ only screen and (min-resolution: 192dpi)
 
     .content {
         border-left: 30px solid red;
-        line-height: initial;
         margin-left: -60px;
         margin-top: 40px;
         padding-left: 30px;
     }
 
     span.button {
-        -webkit-text-size-adjust: 100%;
         font-size: 8em;
     }
 }
