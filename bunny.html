@@ -11,8 +11,8 @@
         <link rel="stylesheet" type="text/css" href="static/css/style.css" />
 
         <script type="text/javascript">
-            window.addEventListener('click', function (evt) {
-                if (evt.detail === 3) { window.location.href = "index.html"; }
+            window.addEventListener('touchstart', function (evt) {
+                if (evt.touches.length === 2) { window.location.href = "index.html"; }
             });
         </script>
     </head>
