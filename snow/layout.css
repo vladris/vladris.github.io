@@ -1,3 +1,14 @@
+body {
+  background: #222222;
+  color: white;
+  text-align: right;
+  font-family: monospace;
+}
+
+a {
+  color: red;
+}
+
 #main {
   position: absolute; 
   top: 0; 
@@ -9,7 +20,7 @@
   width:600px;
 }
 
-.table {
+table {
   border: none;
 }
 
