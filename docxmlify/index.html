@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Docxmlify</title>
+  <meta name="description" content="Escape and comment code">
+  <meta name="author" content="Vlad Riscutia">
+</head>
+
+<body>
+  <p>
+    <textarea id="code"></textarea>
+  </p>
+  <p>
+    <textarea id="docxml"></textarea>
+  </p>
+  <script>
+    document.getElementById("code").oninput = function()
+    {
+      var text = document.getElementById("code").value;
+      text = text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/"/g, "&apos;")
+        .replace(/^/gm, "/// ")
+      document.getElementById("docxml").value = text;
+    };
+  </script>
+</body>
+</html>
