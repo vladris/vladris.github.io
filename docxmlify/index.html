@@ -6,15 +6,31 @@
   <title>Docxmlify</title>
   <meta name="description" content="Escape and comment code">
   <meta name="author" content="Vlad Riscutia">
+
+  <style>
+    body { 
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      margin: auto;
+      max-width: 800px;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    textarea {
+      flex: 1;
+      margin: 10px;
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body>
-  <p>
-    <textarea id="code"></textarea>
-  </p>
-  <p>
-    <textarea id="docxml"></textarea>
-  </p>
+  <textarea id="code"></textarea>
+  <textarea id="docxml"></textarea>
   <script>
     document.getElementById("code").oninput = function()
     {
