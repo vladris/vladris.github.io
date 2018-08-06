@@ -3,7 +3,7 @@
 body {
     color: #282a2b;
     font-family: Ubuntu, Helvetica, Arial, sans-serif;
-    font-size: 16px;
+    font-size: 22px;
 }
 
 .vertical-center {
@@ -16,14 +16,16 @@ body {
 
 .content {
     margin: auto;
-    min-width: 300px;
-    max-width: 640px;
+    min-width: 400px;
+    max-width: 500px;
 }
 
-.border-left {
-    border-left: 10px solid red;
-    margin-left: -20px;
-    padding-left: 30px;
+.row {
+    padding-top: 40px;
+}
+
+.text a:link, .text a:visited, .text a:active, .text a:hover {
+    color: red;
 }
 
 .big-text {
@@ -31,6 +33,7 @@ body {
 }
 
 .links {
+    font-size: 48px;
     margin-top: 40px;
     line-height: 2em;
 }
