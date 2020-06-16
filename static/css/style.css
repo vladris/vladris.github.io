@@ -34,10 +34,6 @@ body {
     line-height: 2em;
 }
 
-.books {
-    font-size: 16px;
-}
-
 a:link, a:visited, a:active, a:hover {
     color: #282a2b;
     -webkit-transition: all ease-in-out 0.3s;
