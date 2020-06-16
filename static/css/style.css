@@ -34,6 +34,11 @@ body {
     line-height: 2em;
 }
 
+img {
+    display: block;
+    margin: 0 auto;
+}
+
 a:link, a:visited, a:active, a:hover {
     color: #282a2b;
     -webkit-transition: all ease-in-out 0.3s;
