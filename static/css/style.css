@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
 
 body {
     color: #282a2b;
-    font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
-    font-size: 22px;
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-size: 20px;
 }
 
 .vertical-center {
@@ -21,7 +21,7 @@ body {
 }
 
 .row {
-    padding-top: 40px;
+    padding-top: 30px;
 }
 
 .text a:link, .text a:visited, .text a:active, .text a:hover {
@@ -46,6 +46,7 @@ a:link, a:visited, a:active, a:hover {
     -o-transition: all ease-in-out 0.3s;
     transition: all ease-in-out 0.3s;
     text-decoration: none;
+    font-weight: bold;
 }
 
 a:hover {
