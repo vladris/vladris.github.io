@@ -123,7 +123,7 @@ function start(params, matrix) {
     return setInterval(function () {
         draw(params, matrix);
         step(matrix);
-    }, 200);
+    }, 500);
 }
 // Stops currently running animation
 function stopRunning() {
