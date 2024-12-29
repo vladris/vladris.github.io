@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap);
 
 body {
     color: #282a2b;
-    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    background-color: #fefefe;
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
     font-size: 20px;
 }
 
@@ -25,12 +26,12 @@ body {
 }
 
 .text a:link, .text a:visited, .text a:active, .text a:hover {
-    color: red;
+    color: #9d7cd8;
 }
 
 .links {
-    font-size: 48px;
-    margin-top: 40px;
+    font-size: 42px;
+    margin-bottom: 40px;
     line-height: 2em;
 }
 
@@ -50,5 +51,5 @@ a:link, a:visited, a:active, a:hover {
 }
 
 a:hover {
-    color: red;
+    color: #9d7cd8;
 }
