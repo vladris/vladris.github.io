@@ -140,7 +140,8 @@
     <script>
         function loadCSSFromQueryParam() {
             const urlParams = new URLSearchParams(window.location.search);
-            const styleParam = `${urlParams.get('style')}/style.css`;
+            const style = urlParams.get('style') ?? 'breguet';
+            const styleParam = `${style}/style.css`;
             if (styleParam) {
                 const link = document.createElement('link');
                 link.rel = 'stylesheet';
