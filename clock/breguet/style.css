@@ -1,0 +1,20 @@
+#top-circle {
+    background-size: cover;
+    background-image: url('breguet.svg');
+}
+
+.hand {
+    background-color: #cd7f32;
+}
+
+#bottom-circle {
+    background-color: #f7ebd3;
+}
+
+.pendulum-circle {
+    background-color: #cd7f32;
+}
+
+.pendulum-line {
+    background-color: #040204;
+}
