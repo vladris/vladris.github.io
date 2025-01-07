@@ -21,8 +21,6 @@
             height: 50vh;
             margin-bottom: 5vh;
             position: relative;
-            background-size: cover;
-            background-image: url('sakura-moon.gif');
         }
         
         #bottom-circle {
@@ -30,7 +28,6 @@
             height: 25vh;
             position: relative;
             overflow: hidden;
-            background-color: #201232;
         }
 
         svg {
@@ -50,7 +47,6 @@
 
         .hand {
             position: absolute;
-            background-color: white;
             box-shadow: 0 0 10px rgba(0 0 0 / 50%);
             stroke-width: 100;
             top: 50%;
@@ -90,7 +86,6 @@
         .pendulum-circle {
             width: 22vh;
             height: 22vh;
-            background-color: #ffe3ff;
             border-radius: 50%;
             box-shadow: 0 10px 20px rgba(0 0 0 / 50%);
             position: absolute;
@@ -102,7 +97,6 @@
         .pendulum-line {
             width: 2vh;
             height: 35vh;
-            background-color: whitesmoke;
             top: 0;
             left: 50%;
             position: absolute;
@@ -203,6 +197,21 @@
 
         setInterval(updateClock, 1000);
         updateClock();
+    </script>
+
+    <script>
+        function loadCSSFromQueryParam() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const styleParam = urlParams.get('style') + '.css';
+            if (styleParam) {
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = styleParam;
+                document.head.appendChild(link);
+            }
+        }
+
+        loadCSSFromQueryParam();
     </script>
 </body>
 </html>

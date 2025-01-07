@@ -1,0 +1,20 @@
+#top-circle {
+    background-size: cover;
+    background-image: url('mickey.gif');
+}
+
+.hand {
+    background-color: #f4c81d;
+}
+
+#bottom-circle {
+    background-color: #b49a7d;
+}
+
+.pendulum-circle {
+    background-color: #c13941;
+}
+
+.pendulum-line {
+    background-color: #040204;
+}

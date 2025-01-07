@@ -1,0 +1,20 @@
+#top-circle {
+    background-size: cover;
+    background-image: url('sakura-moon.gif');
+}
+
+.hand {
+    background-color: white;
+}
+
+#bottom-circle {
+    background-color: #201232;
+}
+
+.pendulum-circle {
+    background-color: #ffe3ff;
+}
+
+.pendulum-line {
+    background-color: whitesmoke;
+}
