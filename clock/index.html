@@ -40,6 +40,16 @@
             transform: translate(-50%, -50%);
         }
 
+        .pin {
+            width: .5vh;
+            height: .5vh;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
         .hand {
             position: absolute;
             box-shadow: 0 0 10px rgba(0 0 0 / 50%);
@@ -110,6 +120,7 @@
         <div class="clock">
             <div class="hand" id="hour-hand"></div>
             <div class="hand" id="minute-hand"></div>
+            <div class="pin"></div>
         </div>
     </div>
     <div id="bottom-circle" class="circle">

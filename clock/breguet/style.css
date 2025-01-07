@@ -7,6 +7,10 @@
     background-color: #cd7f32;
 }
 
+.pin {
+    background-color: #905923;
+}
+
 #bottom-circle {
     background-color: #f7ebd3;
 }
@@ -16,5 +20,5 @@
 }
 
 .pendulum-line {
-    background-color: #040204;
+    background-color: #905923;
 }
