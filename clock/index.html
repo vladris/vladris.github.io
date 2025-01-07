@@ -21,6 +21,7 @@
             width: 50vh;
             height: 50vh;
             margin-bottom: 5vh;
+            position: relative;
         }
         
         #bottom-circle {
@@ -35,19 +36,48 @@
             height: 100%;
         }
 
-        .hand {
-            stroke: black;
-            stroke-width: 50;
-            stroke-linecap: round;
+        .clock {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
-        .hour-hand {
-            stroke-width: 50;
+        .hand {
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0 0 0 / 50%);
+            stroke-width: 100;
+            top: 50%;
+            left: 50%;
+            border-radius: 1vh;
+            transform: translate(-50%, -15%);
+        }
+
+        #hour-hand {
+            height: 17vh;
+            width: 1.8vh;
+            transform-origin: 50% 15%;
+        }
+
+        #minute-hand {
+            height: 22vh;
+            width: 1.2vh;
+            transform-origin: 50% 15%;
+        }
+
+        #second-hand {
+            height: 24vh;
+            width: 1vh;
+            transform-origin: 50% 15%;
         }
 
         .pendulum {
             position: absolute;
-            top: -20vh;
+            top: -21vh;
             left: 50%;
             height: 44.5vh;
             transform-origin: top;
@@ -60,6 +90,7 @@
             height: 22vh;
             background-color: #f7ebd3;
             border-radius: 50%;
+            box-shadow: 0 10px 20px rgba(0 0 0 / 50%);
             position: absolute;
             bottom: 0;
             left: 50%;
@@ -69,9 +100,9 @@
         .pendulum-line {
             width: 2vh;
             height: 35vh;
+            background-color: #f7ebd3;
             top: 0;
             left: 50%;
-            background-color: #f7ebd3;
             position: absolute;
             transform: translateX(-50%);
         }
@@ -136,10 +167,12 @@
                     <path d="M1192.19,963.792C1176.26,963.792 1163.15,978.929 1163.15,997.324L1163.15,997.325C1163.15,1015.72 1176.26,1030.86 1192.19,1030.86C1192.19,1030.86 1192.19,1030.86 1192.19,1030.86C1208.12,1030.86 1221.23,1015.72 1221.23,997.325L1221.23,997.324C1221.23,978.929 1208.12,963.792 1192.19,963.792C1192.19,963.792 1192.19,963.792 1192.19,963.792ZM1194.2,966.244C1203.57,965.493 1211.01,976.485 1211.47,991.781C1211.98,1008.58 1203.92,1024.9 1193.61,1027.94C1192.03,1028.41 1190.45,1028.55 1188.91,1028.36C1180.52,1027.34 1174.31,1016.8 1173.88,1002.87C1173.8,1000.3 1173.92,997.688 1174.24,995.087C1175.95,980.962 1183.19,969.23 1191.75,966.707C1192.57,966.465 1193.39,966.31 1194.2,966.243Z" style="fill-rule:nonzero;stroke:black;stroke-width:1.35px;"/>
                 </g>
             </g>
-
-            <line id="hour-hand" class="hand hour-hand" x1="1154.5" y1="1154.5" x2="1154.5" y2="700" />
-            <line id="minute-hand" class="hand" x1="1154.5" y1="1154.5" x2="1154.5" y2="400" />
         </svg>
+        <div class="clock">
+            <div class="hand" id="hour-hand"></div>
+            <div class="hand" id="minute-hand"></div>
+            <!-- <div class="hand" id="second-hand"></div> -->
+        </div>
     </div>
     <div id="bottom-circle" class="circle">
         <div class="pendulum">
@@ -155,23 +188,13 @@
             const minutes = now.getMinutes();
             const hours = now.getHours();
 
-            const secondHand = document.getElementById('second-hand');
-            const minuteHand = document.getElementById('minute-hand');
-            const hourHand = document.getElementById('hour-hand');
+            const secondDegree = ((seconds / 60) * 360) + 180;
+            const minuteDegree = ((minutes / 60) * 360) + ((seconds / 60) * 6) + 180;
+            const hourDegree = ((hours / 12) * 360) + ((minutes / 60) * 30) + 180;
 
-            const secondAngle = seconds * 6;
-            const minuteAngle = minutes * 6 + seconds * 0.1;
-            const hourAngle = hours * 30 + minutes * 0.5;
-
-            if (secondHand) {
-                secondHand.setAttribute('transform', `rotate(${secondAngle}, 1154.5, 1154.5)`);
-            }
-            if (minuteHand) {
-                minuteHand.setAttribute('transform', `rotate(${minuteAngle}, 1154.5, 1154.5)`);
-            }
-            if (hourHand) {
-                hourHand.setAttribute('transform', `rotate(${hourAngle}, 1154.5, 1154.5)`);
-            }
+            // document.getElementById('second-hand').style.transform = `translate(-50%, -15%) rotate(${secondDegree}deg)`;
+            document.getElementById('minute-hand').style.transform = `translate(-50%, -15%) rotate(${minuteDegree}deg)`;
+            document.getElementById('hour-hand').style.transform = `translate(-50%, -15%) rotate(${hourDegree}deg)`;
         }
 
         setInterval(updateClock, 1000);
