@@ -1,79 +1,175 @@
 ﻿<!DOCTYPE html>
 <html>
     <head>
-        <meta charset='utf-8' />
+        <meta charset="utf-8" />
         <title>Vlad Rișcuția</title>
         <link rel="icon" type="image/x-icon" href="static/mugshot.ico" />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <!-- Bootstrap core CSS -->
-        <link href="static/css/bootstrap.min.css" rel="stylesheet">
+        <link href="static/css/bootstrap.min.css" rel="stylesheet" />
 
         <!-- Custom style -->
         <link rel="stylesheet" type="text/css" href="static/css/style.css" />
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" crossorigin="anonymous">
-   
-        <script type="text/javascript">
-            window.addEventListener('touchstart', function (evt) {
-                if (evt.touches.length === 2) { window.location.href = "http://vladris.com/bunny/"; }
-            });
-
-            function setLocation(ch) {
-                var location = document.getElementById("location");
-                location.innerHTML = ch;
-            }
-        </script>
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v6.5.1/css/all.css"
+            crossorigin="anonymous"
+        />
     </head>
     <body>
         <div class="container vertical-center">
             <div class="content">
                 <div class="text">
                     <div class="row">
-                        <img src="static/img/me.jpg" width="50%" style="border-radius: 50%" />
+                        <img
+                            src="static/img/me.jpg"
+                            width="50%"
+                            style="border-radius: 50%"
+                            id="me"
+                            onmouseover="setMugshot('static/img/me_ghibli.png')"
+                            onmouseleave="setMugshot('static/img/me.jpg')"
+                        />
                     </div>
                     <div class="row">
-                        <p style="text-align: center"><a href="./writings/index.html">Writings</a> | <a href="https://vladris.com/blog/index.html">Blog</a> | <a href="https://www.linkedin.com/in/vladris">Resume</a> | <a href="https://saturn9.studio/">Saturn9</a></p>
+                        <p style="text-align: center">
+                            <a href="./writings/index.html">Writings</a> |
+                            <a href="https://vladris.com/blog/index.html"
+                                >Blog</a
+                            >
+                            |
+                            <a href="https://www.linkedin.com/in/vladris"
+                                >Resume</a
+                            >
+                            | <a href="https://saturn9.studio/">Saturn9</a>
+                        </p>
                     </div>
                     <div class="row">
                         <p>Hi, I'm Vlad Rișcuția 👋</p>
                     </div>
                     <div class="row">
-                        <p>I'm an engineering leader at Microsoft, author, and founder.</p>
+                        <p>
+                            I'm an engineering leader at Microsoft, author, and
+                            founder.
+                        </p>
                     </div>
                     <div class="row">
-                        <p>I work on <a href="https://loop.microsoft.com/">Microsoft Loop</a>. Reinventing collaboration with a ✨ of AI.</p>
+                        <p>
+                            I work on
+                            <a href="https://loop.microsoft.com/"
+                                >Microsoft Loop</a
+                            >. Reinventing collaboration with a ✨ of AI.
+                        </p>
                     </div>
                     <div class="row">
-                        <p>I published three books: <a href="https://www.amazon.com/dp/B0CLSSM8RL">Large Language Models at Work</a>, <a href="https://www.manning.com/books/data-engineering-on-azure">Data Engineering on Azure</a>, and <a href="https://www.manning.com/books/programming-with-types">Programming with Types</a>. I also used to write for the <a href="https://medium.com/data-science-at-microsoft">Data Science at Microsoft</a> Medium publication. See <a href="./writings/index.html">writings</a> for details.</p>
+                        <p>
+                            I published three books:
+                            <a href="https://www.amazon.com/dp/B0CLSSM8RL"
+                                >Large Language Models at Work</a
+                            >,
+                            <a
+                                href="https://www.manning.com/books/data-engineering-on-azure"
+                                >Data Engineering on Azure</a
+                            >, and
+                            <a
+                                href="https://www.manning.com/books/programming-with-types"
+                                >Programming with Types</a
+                            >. I also used to write for the
+                            <a
+                                href="https://medium.com/data-science-at-microsoft"
+                                >Data Science at Microsoft</a
+                            >
+                            Medium publication. See
+                            <a href="./writings/index.html">writings</a> for
+                            details.
+                        </p>
                     </div>
                     <div class="row">
-                        <p>I founded <a href="https://saturn9.studio/">Saturn9</a>, a storytelling company.</p>
+                        <p>
+                            I founded
+                            <a href="https://saturn9.studio/">Saturn9</a>, a
+                            storytelling company.
+                        </p>
                     </div>
                     <div class="row">
-                        <p>You can also check out my <a href="https://vladris.com/blog/index.html">blog</a>, where I geek out on various tech topics.</p>
+                        <p>
+                            You can also check out my
+                            <a href="https://vladris.com/blog/index.html"
+                                >blog</a
+                            >, where I geek out on various tech topics.
+                        </p>
                     </div>
                     <div class="row">
-                        <p><span id="location">📍</span> I'm splitting time between <strong onmouseover="setLocation('🌧️')" onmouseleave="setLocation('📍')">Redmond, WA</strong> and <strong onmouseover="setLocation('🤠')" onmouseleave="setLocation('📍')">Round Rock, TX</strong> if you want to grab a 🍺</p>
+                        <p>
+                            <span id="location">📍</span> I'm splitting time
+                            between
+                            <strong
+                                onmouseover="setLocation('🌧️')"
+                                onmouseleave="setLocation('📍')"
+                                >Redmond, WA</strong
+                            >
+                            and
+                            <strong
+                                onmouseover="setLocation('🤠')"
+                                onmouseleave="setLocation('📍')"
+                                >Round Rock, TX</strong
+                            >
+                            if you want to grab a 🍺
+                        </p>
                     </div>
                 </div>
 
                 <div class="links">
                     <div class="row text-center">
                         <div class="col-xs-4">
-                            <a href="https://github.com/vladris"><span class="fab fa-github"></span></a>
+                            <a href="https://github.com/vladris"
+                                ><span class="fab fa-github"></span
+                            ></a>
                         </div>
                         <div class="col-xs-4">
-                            <a href="https://twitter.com/vladris"><span class="fab fa-x-twitter"></span></a>
+                            <a href="https://twitter.com/vladris"
+                                ><span class="fab fa-x-twitter"></span
+                            ></a>
                         </div>
                         <div class="col-xs-4">
                             <script type="text/javascript">
-                                document.write('<n uers="znvygb:uv@iynqevf.pbz"><fcna pynff="snf sn-rairybcr"></fcna></n>'.replace(/[a-zA-Z]/g, function(c) { return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26); }));
+                                document.write(
+                                    '<n uers="znvygb:uv@iynqevf.pbz"><fcna pynff="snf sn-rairybcr"></fcna></n>'.replace(
+                                        /[a-zA-Z]/g,
+                                        function (c) {
+                                            return String.fromCharCode(
+                                                (c <= "Z" ? 90 : 122) >=
+                                                    (c = c.charCodeAt(0) + 13)
+                                                    ? c
+                                                    : c - 26
+                                            );
+                                        }
+                                    )
+                                );
                             </script>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <script type="text/javascript">
+            window.addEventListener("touchstart", function (evt) {
+                if (evt.touches.length === 2) {
+                    window.location.href = "http://vladris.com/bunny/";
+                }
+            });
+
+            function setLocation(ch) {
+                var location = document.getElementById("location");
+                location.innerHTML = ch;
+            }
+
+            function setMugshot(src) {
+                var location = document.getElementById("me");
+                location.src = src;
+            }
+        </script>
     </body>
 </html>
