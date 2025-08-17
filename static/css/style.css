@@ -59,3 +59,11 @@ a:hover {
 a:hover {
     color: #9d7cd8;
 }
+
+blockquote {
+    border-left: 4px solid #9d7cd8;
+    padding-left: 16px;
+    margin: 16px 0;
+    color: #555;
+    font-style: italic;
+}
