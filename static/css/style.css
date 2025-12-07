@@ -67,3 +67,12 @@ blockquote {
     color: #555;
     font-style: italic;
 }
+
+details summary {
+    margin: 1em 0;
+}
+
+details summary h3 {
+    display: inline;
+    margin: 0;
+}
