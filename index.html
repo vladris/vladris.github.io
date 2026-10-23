@@ -1,179 +1,63 @@
-﻿<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Vlad Rișcuția</title>
-        <link rel="icon" type="image/x-icon" href="static/mugshot.ico" />
-
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <!-- Bootstrap core CSS -->
-        <link href="static/css/bootstrap.min.css" rel="stylesheet" />
-
-        <!-- Custom style -->
-        <link rel="stylesheet" type="text/css" href="static/css/style.css" />
-        <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v6.5.1/css/all.css"
-            crossorigin="anonymous"
-        />
-    </head>
-    <body>
-        <div class="container vertical-center">
-            <div class="content">
-                <div class="text">
-                    <div class="row">
-                        <img
-                            src="static/img/me.jpg"
-                            width="50%"
-                            style="border-radius: 50%"
-                            id="me"
-                        />
-                    </div>
-                    <div class="row">
-                        <p style="text-align: center">
-                            <a href="./writings/index.html">Writings</a> |
-                            <a href="https://vladris.com/blog/index.html"
-                                >Blog</a
-                            >
-                            |
-                            <a href="https://www.linkedin.com/in/vladris"
-                                >Resume</a
-                            >
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>Hi, I'm Vlad Rișcuția 👋</p>
-                    </div>
-                    <div class="row">
-                        <p>
-                            I'm an engineering leader at Microsoft and author.
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
-                            I work on
-                            <a href="https://support.microsoft.com/en-us/office/edit-with-copilot-in-excel-a2fd6fe4-97ac-416b-b89a-22f4d1357c7a">
-                                Excel Agent
-                            </a>, building the next way of working with 🤖
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
-                            I recently launched my debut novel, <a href="https://www.amazon.com/Sector-36-Vlad-Riscutia/dp/B0G87VL92S/">Sector 36</a>.
-                        </p>
-                        <p>
-                            Previously, I published three technical books:
-                            <a href="https://www.amazon.com/dp/B0CLSSM8RL"
-                                >Large Language Models at Work</a
-                            >,
-                            <a
-                                href="https://www.manning.com/books/data-engineering-on-azure"
-                                >Data Engineering on Azure</a
-                            >, and
-                            <a
-                                href="https://www.manning.com/books/programming-with-types"
-                                >Programming with Types</a
-                            >. I also used to write for the
-                            <a
-                                href="https://medium.com/data-science-at-microsoft"
-                                >Data Science at Microsoft</a
-                            >
-                            Medium publication. See
-                            <a href="./writings/index.html">writings</a> for
-                            details.
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
-                            I own
-                            <a href="https://saturn9.studio/">Saturn9</a>, a
-                            story studio.
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
-                            You can also check out my
-                            <a href="https://vladris.com/blog/index.html"
-                                >blog</a
-                            >, where I geek out on various tech topics.
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p>
-                            <span id="location">📍</span> I'm splitting time
-                            between
-                            <strong
-                                onmouseover="setLocation('🌧️')"
-                                onmouseleave="setLocation('📍')"
-                                >Redmond, WA</strong
-                            >
-                            and
-                            <strong
-                                onmouseover="setLocation('🤠')"
-                                onmouseleave="setLocation('📍')"
-                                >Round Rock, TX</strong
-                            >
-                            if you want to grab a 🍺
-                        </p>
-                    </div>
-                </div>
-
-                <div class="links">
-                    <div class="row text-center">
-                        <div class="col-xs-3">
-                            <a href="https://linkedin.com/in/vladirs/"
-                                ><span class="fab fa-linkedin"></span
-                            ></a>
-                        </div>
-                        <div class="col-xs-3">
-                            <a href="https://twitter.com/vladris"
-                                ><span class="fab fa-x-twitter"></span
-                            ></a>
-                        </div>
-                        <div class="col-xs-3">
-                            <a href="https://github.com/vladris"
-                                ><span class="fab fa-github"></span
-                            ></a>
-                        </div>
-                        <div class="col-xs-3">
-                            <script type="text/javascript">
-                                document.write(
-                                    '<n uers="znvygb:iynqevf@bhgybbx.pbz"><fcna pynff="snf sn-rairybcr"></fcna></n>'.replace(
-                                        /[a-zA-Z]/g,
-                                        function (c) {
-                                            return String.fromCharCode(
-                                                (c <= "Z" ? 90 : 122) >=
-                                                    (c = c.charCodeAt(0) + 13)
-                                                    ? c
-                                                    : c - 26
-                                            );
-                                        }
-                                    )
-                                );
-                            </script>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <script type="text/javascript">
-            window.addEventListener("touchstart", function (evt) {
-                if (evt.touches.length === 2) {
-                    window.location.href = "http://vladris.com/bunny/";
-                }
-            });
-
-            function setLocation(ch) {
-                var location = document.getElementById("location");
-                location.innerHTML = ch;
-            }
-
-            function setMugshot(src) {
-                var location = document.getElementById("me");
-                location.src = src;
-            }
-        </script>
-    </body>
+<!DOCTYPE html>
+<html lang="en" data-theme="day">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6f6f3">
+<title>Vlad Rișcuția</title>
+<link rel="icon" type="image/x-icon" href="static/mugshot.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,300..600;1,7..72,400&display=swap">
+<link rel="stylesheet" href="static/css/tokens.css">
+<link rel="stylesheet" href="static/css/site.css">
+</head>
+<body>
+<header class="site-header container">
+    <a class="brand" href="index.html">Vlad Rișcuția</a>
+    <nav aria-label="Main navigation">
+        <a href="writings/index.html">Writings</a>
+        <a href="https://vladris.com/blog/index.html">Blog</a>
+        <a href="https://www.linkedin.com/in/vladris">Resume</a>
+    </nav>
+</header>
+<main class="home">
+    <img class="portrait" src="static/img/me-small.jpg" alt="Vlad Rișcuția">
+    <h1>Hi, I'm Vlad Rișcuția.</h1>
+    <div class="prose home-prose">
+        <p>I'm an engineering leader at Microsoft and author.</p>
+        <p>I work on <a href="https://support.microsoft.com/en-us/office/edit-with-copilot-in-excel-a2fd6fe4-97ac-416b-b89a-22f4d1357c7a">Excel Agent</a>, building the next way of working with AI.</p>
+        <p>I recently launched my debut novel, <a href="https://www.amazon.com/Sector-36-Vlad-Riscutia/dp/B0G87VL92S/">Sector 36</a>.</p>
+        <p>Previously, I published three technical books: <a href="https://www.amazon.com/dp/B0CLSSM8RL">Large Language Models at Work</a>, <a href="https://www.manning.com/books/data-engineering-on-azure">Data Engineering on Azure</a>, and <a href="https://www.manning.com/books/programming-with-types">Programming with Types</a>. I also used to write for the <a href="https://medium.com/data-science-at-microsoft">Data Science at Microsoft</a> Medium publication. See <a href="writings/index.html">writings</a> for details.</p>
+        <p>I own <a href="https://saturn9.studio/">Saturn9</a>, a story studio.</p>
+        <p>You can also check out my <a href="https://vladris.com/blog/index.html">blog</a>, where I geek out on various tech topics.</p>
+        <p>I'm splitting time between <b>Redmond, WA</b> and <b>Round Rock, TX</b> if you want to grab a beer.</p>
+    </div>
+</main>
+<footer class="site-footer container">
+    <span>Vlad Rișcuția</span>
+    <nav aria-label="Elsewhere">
+        <a href="https://github.com/vladris">GitHub</a>
+        <a href="https://linkedin.com/in/vladris/">LinkedIn</a>
+        <a href="https://twitter.com/vladris">X</a>
+        <a href="#" data-email>Email</a>
+        <a href="https://saturn9.studio/">Saturn9</a>
+    </nav>
+</footer>
+<script>
+// The address is ROT13-encoded to keep it away from scrapers
+document.querySelectorAll('[data-email]').forEach(function (link) {
+    link.href = 'znvygb:iynqevf@bhgybbx.pbz'.replace(/[a-zA-Z]/g, function (c) {
+        return String.fromCharCode((c <= 'Z' ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
+    });
+});
+</script>
+<script>
+window.addEventListener('touchstart', function (evt) {
+    if (evt.touches.length === 2) {
+        window.location.href = 'https://vladris.com/bunny/';
+    }
+});
+</script>
+</body>
 </html>

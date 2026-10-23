@@ -1,0 +1,120 @@
+/* vladris.com. Colors, fonts and spacing come from tokens.css. */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+    margin: 0;
+    background: var(--s9-paper);
+    color: var(--s9-ink);
+    font-family: var(--s9-serif);
+    font-size: 17px;
+    line-height: 1.65;
+    font-optical-sizing: auto;
+}
+
+h1, h2, h3, p, ul, ol, figure { margin: 0; }
+img { display: block; max-width: 100%; height: auto; }
+::selection { background: color-mix(in srgb, var(--s9-blue) 22%, transparent); }
+
+a { color: inherit; text-decoration: underline 1px; text-underline-offset: 4px; }
+a:hover { text-decoration-color: var(--s9-blue); }
+:focus-visible { outline: 2px solid var(--s9-blue); outline-offset: 2px; }
+
+/* One centered reading column on every page, like the blog */
+.container { width: 100%; max-width: calc(680px + 2 * clamp(16px, 4vw, 40px)); margin-inline: auto; padding-inline: clamp(16px, 4vw, 40px); }
+
+/* Header: name in mono, nav as words */
+.site-header {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px;
+    padding-block: 24px 16px;
+    font-family: var(--s9-mono); font-size: 14px;
+}
+.brand { font-weight: 600; text-decoration: none; }
+.site-header nav { display: flex; gap: 24px; margin-left: auto; }
+.site-header nav a { color: var(--s9-graphite); text-decoration: none; }
+.site-header nav a:hover { color: var(--s9-ink); text-decoration: underline 1px; }
+.site-header nav a[aria-current] {
+    color: var(--s9-ink);
+    background: linear-gradient(var(--s9-blue), var(--s9-blue)) 0 100% / 100% 2px no-repeat;
+    padding-bottom: 2px;
+}
+
+/* Column plus margin */
+.row { display: grid; gap: 24px 40px; grid-template-columns: minmax(0, 1fr); }
+.prose > * { max-width: 36em; }
+.prose p + p, .prose p + ul, .prose ul + p, .prose h2 + p, .prose p + figure, .prose figure + p { margin-top: 16px; }
+.prose h2 { font-weight: 400; font-size: clamp(26px, 3vw, 34px); line-height: 1.15; letter-spacing: -0.02em; margin-top: 48px; }
+.prose code { font-family: var(--s9-mono); font-size: 0.85em; background: var(--s9-desk); padding: 1px 4px; }
+
+.label, .note, .ruled-list, .site-footer, .meta { font-family: var(--s9-mono); }
+.label { font-size: 13px; color: var(--s9-pencil); }
+.note { font-size: 13px; line-height: 1.55; color: var(--s9-pencil); border-left: 2px solid var(--s9-rule); padding-left: 12px; align-self: start; }
+.note b { color: var(--s9-ink); font-weight: 500; }
+.note a { color: var(--s9-ink); }
+
+h1 { font-weight: 300; font-size: clamp(34px, 6.6vw, 84px); line-height: 1.02; letter-spacing: -0.025em; max-width: 15ch; }
+.lede { max-width: 34em; margin-top: 24px; color: var(--s9-graphite); font-size: 19px; line-height: 1.5; }
+
+.page-hero { padding-block: 64px 96px; }
+.section { padding-bottom: 96px; }
+.section-title { border-top: 1px solid var(--s9-ink); padding-top: 8px; margin-bottom: 40px; font-family: var(--s9-mono); font-size: 14px; font-weight: 500; }
+
+/* Portrait: a photo is an object, square, hard shadow */
+.portrait { width: 160px; border: 1px solid var(--s9-drop); box-shadow: var(--s9-cover-shadow); margin-bottom: 40px; }
+
+/* Ruled lists */
+.ruled-list { list-style: none; padding: 0; border-top: 1px solid var(--s9-ink); font-size: 14px; align-self: start; }
+.ruled-list li { border-bottom: 1px solid var(--s9-rule); }
+.ruled-list a, .ruled-list .item {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+    min-height: 44px; padding-block: 10px; text-decoration: none;
+}
+.ruled-list a span:last-child { color: var(--s9-blue); flex: none; }
+.ruled-list a:hover span:first-child { text-decoration: underline 1px; text-underline-offset: 4px; }
+.ruled-list .num { color: var(--s9-pencil); font-variant-numeric: tabular-nums; flex: none; width: 2.5ch; }
+.ruled-list a.numbered { justify-content: flex-start; }
+.ruled-list a.numbered span:last-child { color: inherit; flex: 1; }
+
+/* Writings: one book per block, series as ruled lists */
+.book-name { font-weight: 400; font-size: 22px; line-height: 1.15; letter-spacing: -0.01em; }
+.book { display: grid; gap: 24px 40px; grid-template-columns: minmax(0, 1fr); padding-bottom: 64px; }
+.book + .book { border-top: 1px solid var(--s9-rule); padding-top: 40px; }
+.book-cover img { width: 180px; border: 1px solid var(--s9-drop); box-shadow: var(--s9-cover-shadow); }
+.book h2 { font-weight: 400; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.05; letter-spacing: -0.02em; margin-top: 8px; }
+.book .desc { margin-top: 16px; color: var(--s9-graphite); max-width: 34em; }
+.book .ruled-list { margin-top: 24px; max-width: 36em; }
+
+.site-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding-block: 16px 40px; border-top: 1px solid var(--s9-rule); font-size: 13px; color: var(--s9-pencil); }
+.site-footer nav { display: flex; flex-wrap: wrap; gap: 4px 16px; }
+.site-footer a { color: var(--s9-graphite); text-decoration: none; }
+.site-footer a:hover { color: var(--s9-ink); text-decoration: underline 1px; }
+
+
+@media (max-width: 559px) {
+    .site-header nav { margin-left: 0; gap: 16px; font-size: 13px; width: 100%; }
+    .book-cover img { width: 140px; }
+    .portrait { width: 120px; }
+}
+
+@media (min-width: 640px) {
+    .book { grid-template-columns: 160px minmax(0, 1fr); }
+    .book-cover { grid-row: span 2; }
+    .book > .ruled-list { grid-column: 2; }
+    .book-cover img { width: 100%; }
+}
+
+/* Home: the bio as one flowing column, centered like the blog */
+.home {
+    width: 100%;
+    max-width: calc(680px + 2 * clamp(16px, 4vw, 40px));
+    margin-inline: auto;
+    padding: 64px clamp(16px, 4vw, 40px) 96px;
+}
+.home .portrait { width: 140px; margin-bottom: 40px; }
+.home h1 { font-size: clamp(34px, 5.4vw, 56px); max-width: none; margin-bottom: 32px; }
+.home-prose > * { max-width: none; }
+.home-prose p { font-size: 19px; line-height: 1.6; }
+.home-prose p + p { margin-top: 16px; }
+.home-prose b { font-weight: 500; }
